@@ -41,7 +41,7 @@ class MailActivity(models.Model):
     active = fields.Boolean(string='Active',
                             help='Default field to archive',
                             default=True)
-    type = fields.Selection(selection_add=[
+    type = fields.Selection(selection=[
         ('overdue', 'Overdue'), ('today', 'Today'), ('planned', 'Planned'),
         ('done', 'Done'), ('cancel', 'Cancelled')],
         string='Type', help='Choose the type of activity.')
