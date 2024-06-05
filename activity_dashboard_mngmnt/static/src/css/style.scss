@@ -1,10 +1,10 @@
-.o_action_manager {
-  direction: ltr;
-  webkit-box-flex: 1;
-  webkit-flex: 1 1 auto;
-  flex: 1 1 auto;
-  overflow: scroll !important;
-}
+//.o_action_manager {
+//  direction: ltr;
+//  webkit-box-flex: 1;
+//  webkit-flex: 1 1 auto;
+//  flex: 1 1 auto;
+//  overflow: scroll !important;
+//}
 .activity-dashboard-card {
     border-radius: 0.3rem;
     display: flex;
@@ -14,11 +14,11 @@
     height: 100px;
     cursor: pointer;
 }
-//.activity-dashboard-card__icon-container {
-//    height: 50px;
-//    width: 50px;
-//    border-radius: 50%;
-//}
+.activity-dashboard-card__icon-container {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
 .my_activity {
   background-color: #229db9;
   border-radius: 10px;
