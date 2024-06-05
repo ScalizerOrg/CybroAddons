@@ -190,224 +190,224 @@
         </section>
     </t>
     <t t-name="ActivityTable">
-        <div class="table_planned_activity">
-            <table cellspacing="10" width="100%"
-                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">
-                <thead>
-                    <tr>
-                        <th>Planned Activities</th>
-                    </tr>
+<!--        <div class="table_planned_activity">-->
+<!--            <table cellspacing="10" width="100%"-->
+<!--                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Planned Activities</th>-->
+<!--                    </tr>-->
 
-                    <t t-if="planned_activity == ''">
-                        <td>No Data Available</td>
-                    </t>
-                </thead>
-                <t t-if="planned_activity != ''">
-                    <thead class="table table-bordered mt32">
-                        <tr class="table_head">
-                            <th class="table_head_">Name</th>
-                            <th class="table_head_">Activity Type</th>
-                            <th class="table_head_">Assigned to</th>
-                            <th class="table_head_">Dead Line Date</th>
-                            <th class="table_head_">View</th>
-                            <th class="table_head_">Origin</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr t-foreach="planned_activity" t-as="line">
-                            <td>
-                                <t t-esc="line['display_name']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['activity_type_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['user_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['date_deadline']"/>
-                            </td>
-                            <td class="click-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    View
-                                </button>
-                            </td>
-                            <td class="click-origin-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    Origin
-                                </button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </t>
-            </table>
-        </div>
-        <div class="table_today_activity">
-            <table cellspacing="10" width="100%"
-                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">
-                <thead>
-                    <tr>
-                        <th>Today's Activities</th>
-                    </tr>
-                    <t t-if="today_activity == ''">
-                        <td>No Data Available</td>
-                    </t>
-                </thead>
+<!--                    <t t-if="planned_activity == ''">-->
+<!--                        <td>No Data Available</td>-->
+<!--                    </t>-->
+<!--                </thead>-->
+<!--                <t t-if="planned_activity != ''">-->
+<!--                    <thead class="table table-bordered mt32">-->
+<!--                        <tr class="table_head">-->
+<!--                            <th class="table_head_">Name</th>-->
+<!--                            <th class="table_head_">Activity Type</th>-->
+<!--                            <th class="table_head_">Assigned to</th>-->
+<!--                            <th class="table_head_">Dead Line Date</th>-->
+<!--                            <th class="table_head_">View</th>-->
+<!--                            <th class="table_head_">Origin</th>-->
+<!--                        </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                        <tr t-foreach="planned_activity" t-as="line">-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['display_name']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['activity_type_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['user_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['date_deadline']"/>-->
+<!--                            </td>-->
+<!--                            <td class="click-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    View-->
+<!--                                </button>-->
+<!--                            </td>-->
+<!--                            <td class="click-origin-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    Origin-->
+<!--                                </button>-->
+<!--                            </td>-->
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </t>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--        <div class="table_today_activity">-->
+<!--            <table cellspacing="10" width="100%"-->
+<!--                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Today's Activities</th>-->
+<!--                    </tr>-->
+<!--                    <t t-if="today_activity == ''">-->
+<!--                        <td>No Data Available</td>-->
+<!--                    </t>-->
+<!--                </thead>-->
 
-                <t t-if="today_activity != ''">
-                    <thead class="table table-bordered mt32">
-                        <tr class="table_head">
-                            <th class="table_head_">Name</th>
-                            <th class="table_head_">Activity Type</th>
-                            <th class="table_head_">Assigned to</th>
-                            <th class="table_head_">Dead Line Date</th>
-                            <th class="table_head_">View</th>
-                            <th class="table_head_">Origin</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr t-foreach="today_activity" t-as="line">
-                            <td>
-                                <t t-esc="line['display_name']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['activity_type_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['user_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['date_deadline']"/>
-                            </td>
-                            <td class="click-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    View
-                                </button>
-                            </td>
-                            <td class="click-origin-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    Origin
-                                </button>
-                            </td>
+<!--                <t t-if="today_activity != ''">-->
+<!--                    <thead class="table table-bordered mt32">-->
+<!--                        <tr class="table_head">-->
+<!--                            <th class="table_head_">Name</th>-->
+<!--                            <th class="table_head_">Activity Type</th>-->
+<!--                            <th class="table_head_">Assigned to</th>-->
+<!--                            <th class="table_head_">Dead Line Date</th>-->
+<!--                            <th class="table_head_">View</th>-->
+<!--                            <th class="table_head_">Origin</th>-->
+<!--                        </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                        <tr t-foreach="today_activity" t-as="line">-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['display_name']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['activity_type_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['user_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['date_deadline']"/>-->
+<!--                            </td>-->
+<!--                            <td class="click-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    View-->
+<!--                                </button>-->
+<!--                            </td>-->
+<!--                            <td class="click-origin-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    Origin-->
+<!--                                </button>-->
+<!--                            </td>-->
 
-                        </tr>
-                    </tbody>
-                </t>
-            </table>
-        </div>
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </t>-->
+<!--            </table>-->
+<!--        </div>-->
 
-        <div class="table_main_view">
-            <table cellspacing="10" width="100%"
-                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">
-                <thead>
-                    <tr>
-                        <th>Completed Activities</th>
-                    </tr>
-                    <t t-if="done_activity == ''">
-                        <td>No Data Available</td>
-                    </t>
-                </thead>
+<!--        <div class="table_main_view">-->
+<!--            <table cellspacing="10" width="100%"-->
+<!--                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Completed Activities</th>-->
+<!--                    </tr>-->
+<!--                    <t t-if="done_activity == ''">-->
+<!--                        <td>No Data Available</td>-->
+<!--                    </t>-->
+<!--                </thead>-->
 
-                <t t-if="done_activity != ''">
-                    <thead class="table table-bordered mt32">
-                        <tr class="table_head">
-                            <th class="table_head_">Name</th>
-                            <th class="table_head_">Activity Type</th>
-                            <th class="table_head_">Assigned to</th>
-                            <th class="table_head_">Dead Line Date</th>
-                            <th class="table_head_">View</th>
-                            <th class="table_head_">Origin</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr t-foreach="done_activity" t-as="line">
-                            <td>
-                                <t t-esc="line['display_name']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['activity_type_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['user_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['date_deadline']"/>
-                            </td>
-                            <td class="click-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    View
-                                </button>
-                            </td>
-                            <td class="click-origin-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    Origin
-                                </button>
-                            </td>
+<!--                <t t-if="done_activity != ''">-->
+<!--                    <thead class="table table-bordered mt32">-->
+<!--                        <tr class="table_head">-->
+<!--                            <th class="table_head_">Name</th>-->
+<!--                            <th class="table_head_">Activity Type</th>-->
+<!--                            <th class="table_head_">Assigned to</th>-->
+<!--                            <th class="table_head_">Dead Line Date</th>-->
+<!--                            <th class="table_head_">View</th>-->
+<!--                            <th class="table_head_">Origin</th>-->
+<!--                        </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                        <tr t-foreach="done_activity" t-as="line">-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['display_name']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['activity_type_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['user_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['date_deadline']"/>-->
+<!--                            </td>-->
+<!--                            <td class="click-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    View-->
+<!--                                </button>-->
+<!--                            </td>-->
+<!--                            <td class="click-origin-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    Origin-->
+<!--                                </button>-->
+<!--                            </td>-->
 
-                        </tr>
-                    </tbody>
-                </t>
-            </table>
-        </div>
-        <div class="table_main_view">
-            <table cellspacing="10" width="100%"
-                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">
-                <thead>
-                    <tr>
-                        <th>Overdue Activities</th>
-                    </tr>
-                    <t t-if="overdue_activity == ''">
-                        <td>No Data Available</td>
-                    </t>
-                </thead>
-                <t t-if="overdue_activity != ''">
-                    <thead class="table table-bordered mt32">
-                        <tr class="table_head">
-                            <th class="table_head_">Name</th>
-                            <th class="table_head_">Activity Type</th>
-                            <th class="table_head_">Assigned to</th>
-                            <th class="table_head_">Dead Line Date</th>
-                            <th class="table_head_">View</th>
-                            <th class="table_head_">Origin</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr t-foreach="overdue_activity" t-as="line">
-                            <td>
-                                <t t-esc="line['display_name']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['activity_type_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['user_id']['1']"/>
-                            </td>
-                            <td>
-                                <t t-esc="line['date_deadline']"/>
-                            </td>
-                            <td class="click-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    View
-                                </button>
-                            </td>
-                            <td class="click-origin-view">
-                                <button t-att-value="line['id']"
-                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">
-                                    Origin
-                                </button>
-                            </td>
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </t>-->
+<!--            </table>-->
+<!--        </div>-->
+<!--        <div class="table_main_view">-->
+<!--            <table cellspacing="10" width="100%"-->
+<!--                   style="padding: 24px; background-color: white; color: #454748; border-collapse:separate;">-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--                        <th>Overdue Activities</th>-->
+<!--                    </tr>-->
+<!--                    <t t-if="overdue_activity == ''">-->
+<!--                        <td>No Data Available</td>-->
+<!--                    </t>-->
+<!--                </thead>-->
+<!--                <t t-if="overdue_activity != ''">-->
+<!--                    <thead class="table table-bordered mt32">-->
+<!--                        <tr class="table_head">-->
+<!--                            <th class="table_head_">Name</th>-->
+<!--                            <th class="table_head_">Activity Type</th>-->
+<!--                            <th class="table_head_">Assigned to</th>-->
+<!--                            <th class="table_head_">Dead Line Date</th>-->
+<!--                            <th class="table_head_">View</th>-->
+<!--                            <th class="table_head_">Origin</th>-->
+<!--                        </tr>-->
+<!--                    </thead>-->
+<!--                    <tbody>-->
+<!--                        <tr t-foreach="overdue_activity" t-as="line">-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['display_name']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['activity_type_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['user_id']['1']"/>-->
+<!--                            </td>-->
+<!--                            <td>-->
+<!--                                <t t-esc="line['date_deadline']"/>-->
+<!--                            </td>-->
+<!--                            <td class="click-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    View-->
+<!--                                </button>-->
+<!--                            </td>-->
+<!--                            <td class="click-origin-view">-->
+<!--                                <button t-att-value="line['id']"-->
+<!--                                        style="border-radius: 8px; background-color: #c4c4f2;width: 100px;height: 35px;">-->
+<!--                                    Origin-->
+<!--                                </button>-->
+<!--                            </td>-->
 
-                        </tr>
-                    </tbody>
-                </t>
-            </table>
-        </div>
+<!--                        </tr>-->
+<!--                    </tbody>-->
+<!--                </t>-->
+<!--            </table>-->
+<!--        </div>-->
     </t>
 </templates>
