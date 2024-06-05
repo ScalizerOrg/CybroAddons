@@ -1,7 +1,8 @@
-p, span, a, ul, li, button {
-    font-size: inherit;
-	font-weight: inherit;
-}
+/*p, span, a, ul, li, button {*/
+/*    font-size: inherit;*/
+/*	font-weight: inherit;*/
+/*	line-height: inherit;*/
+/*}*/
 
 strong {
 	font-weight: 600;
