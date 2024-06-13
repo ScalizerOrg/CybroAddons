@@ -22,7 +22,7 @@
 ###################################################################################
 {
     'name': 'Activity Management',
-    'version': '16.0.1.1.1',
+    'version': '16.0.1.1.2',
     'category': 'Tools',
     'summary': 'Advance Activity Management and Dashboard View.',
     'author': 'Cybrosys Techno Solutions',
