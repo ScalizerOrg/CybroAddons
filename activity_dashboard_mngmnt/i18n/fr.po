@@ -6,19 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-13 09:47+0000\n"
-"PO-Revision-Date: 2024-06-13 09:47+0000\n"
+"POT-Creation-Date: 2024-06-13 14:18+0000\n"
+"PO-Revision-Date: 2024-06-13 14:18+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-
-#. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
-msgid "<strong>Recommended Activities</strong>"
-msgstr "<strong>Activités conseillées</strong>"
 
 #. module: activity_dashboard_mngmnt
 #: model:ir.model.fields,field_description:activity_dashboard_mngmnt.field_mail_activity__active
@@ -34,7 +29,6 @@ msgstr "Activités"
 #. module: activity_dashboard_mngmnt
 #: model:ir.model,name:activity_dashboard_mngmnt.model_mail_activity
 #: model:ir.ui.menu,name:activity_dashboard_mngmnt.menu_my_activities
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
 msgid "Activity"
 msgstr "Activité"
 
@@ -188,12 +182,12 @@ msgid "Done"
 msgstr "Fait"
 
 #. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
+#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form_popup
 msgid "Done & Launch Next"
 msgstr "Fait & Lancer la suivante"
 
 #. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
+#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form_popup
 msgid "Done & Schedule Next"
 msgstr "Fait & Planifier la suivante"
 
@@ -223,22 +217,12 @@ msgid "Last Updated on"
 msgstr "Dernière modification le"
 
 #. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
-msgid "Log a note..."
-msgstr "Enregistrer une note..."
-
-#. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
-msgid "Log an Activity"
-msgstr "Consigner une activité"
-
-#. module: activity_dashboard_mngmnt
 #: model:ir.actions.server,name:activity_dashboard_mngmnt.activity_done
 msgid "Mark As Done"
 msgstr "Marquer comme fait"
 
 #. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
+#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form_popup
 msgid "Mark as Done"
 msgstr "Marquer comme fait"
 
@@ -341,7 +325,7 @@ msgid "Planned Activity"
 msgstr "Activité plannifiée"
 
 #. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
+#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form_popup
 msgid "Schedule"
 msgstr "Programmer"
 
@@ -433,11 +417,6 @@ msgstr "Vue"
 #, python-format
 msgid "You Cant Cancel this activity %s"
 msgstr "Vous ne pouvez pas annuler cette activité %s"
-
-#. module: activity_dashboard_mngmnt
-#: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.mail_activity_view_form
-msgid "e.g. Discuss proposal"
-msgstr "Par ex Discuter une proposition"
 
 #. module: activity_dashboard_mngmnt
 #: model_terms:ir.ui.view,arch_db:activity_dashboard_mngmnt.sales_team_crm_tag_view_form
