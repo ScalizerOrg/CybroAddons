@@ -151,7 +151,7 @@ class MailActivity(models.Model):
         for rec in self:
             rec.state = 'done'
             rec.active = False
-        # self.unlink()
+        self.unlink()
         return messages, next_activities
 
     @api.depends('state', 'date_deadline')
