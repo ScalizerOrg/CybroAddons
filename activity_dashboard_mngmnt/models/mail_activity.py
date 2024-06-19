@@ -154,18 +154,19 @@ class MailActivity(models.Model):
         self.unlink()
         return messages, next_activities
 
-    @api.depends('state', 'date_deadline')
-    def _compute_state(self):
+    @api.model
+    def _compute_state_from_date(self, date_deadline, tz=False):
         """Compute the state"""
-        today = fields.Date.today()
-        # today = today_default
-        # if tz:
-        #     today_utc = pytz.utc.localize(datetime.utcnow())
-        #     today_tz = today_utc.astimezone(pytz.timezone(tz))
-        #     today = date(year=today_tz.year, month=today_tz.month,
-        #                  day=today_tz.day)
+        date_deadline = fields.Date.from_string(date_deadline)
+        today_default = date.today()
+        today = today_default
+        if tz:
+            today_utc = pytz.utc.localize(datetime.utcnow())
+            today_tz = today_utc.astimezone(pytz.timezone(tz))
+            today = date(year=today_tz.year, month=today_tz.month,
+                         day=today_tz.day)
+        diff = (date_deadline - today)
         for rec in self:
-            diff = (rec.date_deadline - today)
             if rec.state == 'done':
                 return 'done'
             elif rec.type == 'cancel':
