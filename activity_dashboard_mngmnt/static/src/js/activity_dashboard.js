@@ -4,6 +4,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
     var core = require('web.core');
     var rpc = require('web.rpc');
     var QWeb = core.qweb;
+    var _t = core._t;
     var session = require('web.session');
     var user = session.user_id
 
@@ -91,7 +92,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         var id = e.target.value;
         this.do_action({
             type: 'ir.actions.act_window',
-            name: 'All Activity',
+            name: _t('All Activity'),
             res_model: 'mail.activity',
             res_id: parseInt(id),
             views: [[false, 'form']],
@@ -109,7 +110,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         }).then(function(result){this
             self.do_action({
             type: 'ir.actions.act_window',
-            name: 'Activity Origin',
+            name: _t('Activity Origin'),
             res_model: result.model,
             res_id: result.res_id,
             views: [[false, 'form']],
@@ -128,7 +129,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         };
         this.do_action({
             type: 'ir.actions.act_window',
-            name: 'All Activity',
+            name: _t('All Activity'),
             res_model: 'mail.activity',
             domain: [],
             views: [[false, 'list'], [false, 'form']],
@@ -147,7 +148,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         };
         this.do_action({
             type: 'ir.actions.act_window',
-            name: 'Planned Activity',
+            name: _t('Planned Activity'),
             res_model: 'mail.activity',
             domain: [['state', '=', 'planned']],
             views: [[false, 'list'], [false, 'form']],
@@ -166,7 +167,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         };
         this.do_action({
             type: 'ir.actions.act_window',
-            name: 'Completed Activity',
+            name: _t('Completed Activity'),
             res_model: 'mail.activity',
             domain: [['state', '=', 'done']],
             views: [[false, 'list'], [false, 'form']],
@@ -183,7 +184,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
 
         this.do_action({
             type: 'ir.actions.act_window',
-            name: "Today's Activities",
+            name: _t("Today's Activities"),
             res_model: 'mail.activity',
             domain: [['state', '=', 'today']],
             views: [[false, 'list'], [false, 'form']],
@@ -202,7 +203,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         };
         this.do_action({
             type: 'ir.actions.act_window',
-            name: 'Overdue Activity',
+            name: _t('Overdue Activity'),
             res_model: 'mail.activity',
             domain: [['state', '=', 'overdue']],
             views: [[false, 'list'], [false, 'form']],
@@ -222,7 +223,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         };
         this.do_action({
             type: 'ir.actions.act_window',
-            name: "Today's Activity",
+            name: _t("Today's Activity"),
             res_model: 'mail.activity',
             domain: [['state', '=', 'cancel']],
             views: [[false, 'list'], [false, 'form']],
@@ -241,7 +242,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         };
         var action = {
             type: 'ir.actions.act_window',
-            name: 'Activity Type',
+            name: _t('Activity Type'),
             res_model: 'activity.type',
             domain: [['state', 'in', ['today']]],
             views: [[false, 'list'], [false, 'form']],
@@ -250,7 +251,7 @@ odoo.define('activity_dashboard_mngmnt.activity_dashboard', function (require) {
         }
         this.do_action({
             type: 'ir.actions.act_window',
-            name: "Today's Activity",
+            name: _t("Today's Activity"),
             res_model: 'mail.activity.type',
             views: [[false, 'list'], [false, 'form']],
             view_mode: 'list',

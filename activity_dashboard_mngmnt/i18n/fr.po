@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-13 14:18+0000\n"
-"PO-Revision-Date: 2024-06-13 14:18+0000\n"
+"POT-Creation-Date: 2024-06-19 09:23+0000\n"
+"PO-Revision-Date: 2024-06-19 09:23+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -42,6 +42,14 @@ msgid "Activity Dashboard"
 msgstr "Activités"
 
 #. module: activity_dashboard_mngmnt
+#. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#, python-format
+msgid "Activity Origin"
+msgstr "Origine"
+
+#. module: activity_dashboard_mngmnt
 #: model:ir.model,name:activity_dashboard_mngmnt.model_activity_tag
 #: model:ir.ui.menu,name:activity_dashboard_mngmnt.menu_activity_tag
 msgid "Activity Tag"
@@ -54,11 +62,13 @@ msgstr "Étiquettes d'activité"
 
 #. module: activity_dashboard_mngmnt
 #. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
@@ -71,7 +81,11 @@ msgstr "Type d'activité"
 
 #. module: activity_dashboard_mngmnt
 #. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #, python-format
 msgid "All Activity"
@@ -129,6 +143,14 @@ msgstr "Couleur"
 #, python-format
 msgid "Completed Activities"
 msgstr "Activités terminées"
+
+#. module: activity_dashboard_mngmnt
+#. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#, python-format
+msgid "Completed Activity"
+msgstr "Activité terminée"
 
 #. module: activity_dashboard_mngmnt
 #: model:ir.ui.menu,name:activity_dashboard_mngmnt.activity_menu_configuration
@@ -303,6 +325,14 @@ msgid "Overdue Activities"
 msgstr "Activités en retard"
 
 #. module: activity_dashboard_mngmnt
+#. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#, python-format
+msgid "Overdue Activity"
+msgstr "Activité en retard"
+
+#. module: activity_dashboard_mngmnt
 #: model:ir.model.fields.selection,name:activity_dashboard_mngmnt.selection__mail_activity__state__planned
 #: model:ir.model.fields.selection,name:activity_dashboard_mngmnt.selection__mail_activity__type__planned
 msgid "Planned"
@@ -318,7 +348,9 @@ msgstr "Activités planifiées"
 
 #. module: activity_dashboard_mngmnt
 #. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #, python-format
 msgid "Planned Activity"
@@ -368,13 +400,25 @@ msgstr "Aujourd'hui"
 
 #. module: activity_dashboard_mngmnt
 #. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #: code:addons/activity_dashboard_mngmnt/static/src/xml/activity_dashboard_view.xml:0
 #, python-format
 msgid "Today's Activities"
 msgstr "Activités du jour"
+
+#. module: activity_dashboard_mngmnt
+#. odoo-javascript
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/CybroAddons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#: code:addons/activity_dashboard_mngmnt/static/src/js/activity_dashboard.js:0
+#, python-format
+msgid "Today's Activity"
+msgstr "Activité du jour"
 
 #. module: activity_dashboard_mngmnt
 #: model:ir.model.fields,help:activity_dashboard_mngmnt.field_mail_activity__state
