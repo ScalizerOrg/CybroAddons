@@ -44,6 +44,6 @@
     'images': ['static/description/banner.png'],
     'license': 'OPL-1',
     'installable': True,
-    'auto_install': True,
+    'auto_install': False,
     'application': False,
 }
