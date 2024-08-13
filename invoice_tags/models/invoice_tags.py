@@ -40,10 +40,10 @@ class InvoiceTag(models.Model):
         ('name_uniq', 'unique (name)', "Tag name already exists !"),
     ]
 
-    @api.model
-    def create(self, vals):
+    @api.model_create_multi
+    def create(self, vals_list):
         """Create filtering option in accordance with tags that are created"""
-        result = super(InvoiceTag, self).create(vals)
+        result = super(InvoiceTag, self).create(vals_list)
         inherit_id = self.env.ref('account.view_account_invoice_filter')
         arch_base = _("""<?xml version="1.0"?>
                           <xpath expr="//filter[@name='draft']"
