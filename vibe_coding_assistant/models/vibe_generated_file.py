@@ -78,13 +78,10 @@ class VibeGeneratedFile(models.Model):
         help="True if the user has hand-edited this file after generation.",
     )
 
-    _sql_constraints = [
-        (
-            "module_path_unique",
-            "unique(module_id, path)",
-            "Duplicate file path within the same generated module.",
-        ),
-    ]
+    module_path_unique = models.Constraint(
+        'unique(module_id, path)',
+        'Duplicate file path within the same generated module.',
+    )
 
     @api.depends("path")
     def _compute_language(self):

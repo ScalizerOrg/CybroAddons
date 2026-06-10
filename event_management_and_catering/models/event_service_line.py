@@ -54,9 +54,10 @@ class EventServiceLine(models.Model):
                                          string="Related Product",
                                          help="Select the related service "
                                               "product")
-    _sql_constraints = [('event_supplier_unique', 'unique(event_id, service)',
-                         'Duplication Of Service In The Service Lines '
-                         'Is not Allowed')]
+    event_supplier_unique = models.Constraint(
+        'unique(event_id, service)',
+        'Duplication Of Service In The Service Lines Is not Allowed',
+    )
 
     @api.constrains('date_from', 'date_to', 'event_id')
     def _check_date_to_date_from(self):

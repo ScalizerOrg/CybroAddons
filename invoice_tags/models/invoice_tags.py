@@ -38,9 +38,10 @@ class InvoiceTag(models.Model):
     color = fields.Integer(string='Color', default=_get_default_color,
                            help="Tag color")
 
-    _sql_constraints = [
-        ('name_uniq', 'unique (name)', "Tag name already exists !"),
-    ]
+    name_uniq = models.Constraint(
+        'unique (name)',
+        'Tag name already exists !',
+    )
 
     def unlink(self):
         """Unlink the tags from filtering"""

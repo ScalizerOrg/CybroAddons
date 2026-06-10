@@ -34,10 +34,10 @@ class DiscussPollVote(models.Model):
     voter_id = fields.Many2one('res.partner', string='Voter', required=True,
                                default=lambda self: self.env.user.partner_id)
 
-    _sql_constraints = [
-        ('unique_vote', 'UNIQUE(poll_id, option_id, voter_id)',
-         'You cannot vote for the same option twice!')
-    ]
+    unique_vote = models.Constraint(
+        'UNIQUE(poll_id, option_id, voter_id)',
+        'You cannot vote for the same option twice!',
+    )
 
     @api.constrains('poll_id', 'voter_id')
     def _check_single_choice(self):

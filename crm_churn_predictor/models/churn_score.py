@@ -179,10 +179,10 @@ class ChurnScore(models.Model):
     # ------------------------------------------------------------------
     # Constraints
     # ------------------------------------------------------------------
-    _sql_constraints = [
-        ('partner_unique', 'UNIQUE(partner_id)',
-         'A churn score record already exists for this customer.'),
-    ]
+    partner_unique = models.Constraint(
+        'UNIQUE(partner_id)',
+        'A churn score record already exists for this customer.',
+    )
 
     # ------------------------------------------------------------------
     # Computed fields

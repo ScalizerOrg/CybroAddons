@@ -43,9 +43,10 @@ class ResPartner(models.Model):
                               ('approved', 'Approved')], default='draft',
                              string='Status',
                              help="The status of contacts")
-    _sql_constraints = [
-        ('id_uniq', 'unique (customer_supplier)', 'The partner id unique !')
-    ]
+    id_uniq = models.Constraint(
+        'unique (customer_supplier)',
+        'The partner id unique !',
+    )
 
     def action_validate(self):
         """  Method of button validate to validate customer or supplier """

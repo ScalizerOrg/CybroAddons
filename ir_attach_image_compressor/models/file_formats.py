@@ -37,9 +37,10 @@ class FileFormatSource(models.Model):
                                                      "image/png", required=True,
                             copy=False)
 
-    _sql_constraints = [
-        ('unique_mime_type', 'unique (mime_type)', 'Mime type already exists!')
-    ]
+    unique_mime_type = models.Constraint(
+        'unique (mime_type)',
+        'Mime type already exists!',
+    )
 
     def name_get(self):
         """ this functions gets the name of the format """

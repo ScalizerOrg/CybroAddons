@@ -156,9 +156,10 @@ class PurchaseRecurringAgreement(models.Model):
                                  help="Indicates the No. of Orders Generated "
                                       "with this Agreement")
 
-    _sql_constraints = [
-        ('number_uniq', 'unique(number)', 'Agreement Number Must be Unique !'),
-    ]
+    number_uniq = models.Constraint(
+        'unique(number)',
+        'Agreement Number Must be Unique !',
+    )
 
     def get_orders(self):
         """Returns All Orders Generated from the Agreement"""

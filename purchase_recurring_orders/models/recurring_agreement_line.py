@@ -73,12 +73,16 @@ class RecurringAgreementLine(models.Model):
         related='product_id.list_price', string="List Price", readonly=True,
         help='Price of product in purchase order lines')
 
-    _sql_constraints = [
-        ('line_qty_zero', 'CHECK (quantity > 0)',
-         'All product quantities must be greater than 0.\n'),
-        ('line_interval_zero', 'CHECK (ordering_interval > 0)',
-         'All ordering intervals must be greater than 0.\n'),
-    ]
+    line_qty_zero = models.Constraint(
+        'CHECK (quantity > 0)',
+        'All product quantities must be greater than 0.
+',
+    )
+    line_interval_zero = models.Constraint(
+        'CHECK (ordering_interval > 0)',
+        'All ordering intervals must be greater than 0.
+',
+    )
 
     @api.onchange('product_id')
     def onchange_product_id(self, product_id=False):

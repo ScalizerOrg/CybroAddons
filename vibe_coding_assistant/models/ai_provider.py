@@ -72,9 +72,10 @@ class AIProvider(models.Model):
              "used any user-config of this provider.",
     )
 
-    _sql_constraints = [
-        ("code_unique", "unique(code)", "Provider code must be unique."),
-    ]
+    code_unique = models.Constraint(
+        'unique(code)',
+        'Provider code must be unique.',
+    )
 
     def _compute_conversation_count(self):
         """Count conversations and aggregate token usage for each provider.

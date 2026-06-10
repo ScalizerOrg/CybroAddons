@@ -35,8 +35,10 @@ class CleaningTeam(models.Model):
 
     name = fields.Char(string='Team Name', required=True,
                        help="Choose Team Name")
-    _sql_constraints = [
-        ('name_unique', 'unique(name)', 'The team already exists')]
+    name_unique = models.Constraint(
+        'unique(name)',
+        'The team already exists',
+    )
 
     emp_detail_ids = fields.Many2many('employee.details',
                                       help="Stores records to define domain "

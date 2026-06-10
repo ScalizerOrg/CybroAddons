@@ -133,13 +133,10 @@ class AIProviderUserConfig(models.Model):
             rec.tokens_used_total = sum(convs.mapped("tokens_total"))
             rec.tokens_conversation_count = len(convs)
 
-    _sql_constraints = [
-        (
-            "user_provider_unique",
-            "unique(user_id, provider_id)",
-            "You already have a configuration for this provider.",
-        ),
-    ]
+    user_provider_unique = models.Constraint(
+        'unique(user_id, provider_id)',
+        'You already have a configuration for this provider.',
+    )
 
     # ── Computed / onchange ───────────────────────────────────────────────
 

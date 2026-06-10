@@ -68,13 +68,10 @@ class PartnerRelation(models.Model):
         string='Related Name',
     )
 
-    _sql_constraints = [
-        (
-            'unique_partner_relation',
-            'unique(contact_id, relation_contact_id, relation_type_id)',
-            _('This relationship already exists.')
-        ),
-    ]
+    unique_partner_relation = models.Constraint(
+        'unique(contact_id, relation_contact_id, relation_type_id)',
+        _('This relationship already exists.'),
+    )
 
     @api.constrains('contact_id', 'relation_contact_id')
     def _check_self_relation(self):
