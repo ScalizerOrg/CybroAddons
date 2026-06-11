@@ -37,7 +37,7 @@ class FileFormatSource(models.Model):
                                                      "image/png", required=True,
                             copy=False)
 
-    unique_mime_type = models.Constraint(
+    _unique_mime_type = models.Constraint(
         'unique (mime_type)',
         'Mime type already exists!',
     )

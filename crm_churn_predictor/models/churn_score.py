@@ -179,7 +179,7 @@ class ChurnScore(models.Model):
     # ------------------------------------------------------------------
     # Constraints
     # ------------------------------------------------------------------
-    partner_unique = models.Constraint(
+    _partner_unique = models.Constraint(
         'UNIQUE(partner_id)',
         'A churn score record already exists for this customer.',
     )

@@ -54,7 +54,7 @@ class EventServiceLine(models.Model):
                                          string="Related Product",
                                          help="Select the related service "
                                               "product")
-    event_supplier_unique = models.Constraint(
+    _event_supplier_unique = models.Constraint(
         'unique(event_id, service)',
         'Duplication Of Service In The Service Lines Is not Allowed',
     )

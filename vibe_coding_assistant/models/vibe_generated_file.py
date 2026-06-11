@@ -78,7 +78,7 @@ class VibeGeneratedFile(models.Model):
         help="True if the user has hand-edited this file after generation.",
     )
 
-    module_path_unique = models.Constraint(
+    _module_path_unique = models.Constraint(
         'unique(module_id, path)',
         'Duplicate file path within the same generated module.',
     )

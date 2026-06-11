@@ -36,11 +36,11 @@ class EmployeeFleet(models.Model):
                                   ('hybrid', 'Hybrid'),
                                   ('petrol', 'Petrol')],
                                  string='Fuel Type', help='Fuel Used by the vehicle')
-    vin_sn_unique = models.Constraint(
+    _vin_sn_unique = models.Constraint(
         'unique (vin_sn)',
         'Chassis Number already exists !',
     )
-    license_plate_unique = models.Constraint(
+    _license_plate_unique = models.Constraint(
         'unique (license_plate)',
         'License plate already exists !',
     )

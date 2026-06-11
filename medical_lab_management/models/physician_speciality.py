@@ -32,7 +32,7 @@ class PhysicianSpeciality(models.Model):
     code = fields.Char(string='ID')
     name = fields.Char(string='Specialty', help='Name of the specialty',
                        required=True)
-    name_uniq = models.Constraint(
+    _name_uniq = models.Constraint(
         'UNIQUE(name)',
         'Name must be unique!',
     )

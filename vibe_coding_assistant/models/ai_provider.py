@@ -72,7 +72,7 @@ class AIProvider(models.Model):
              "used any user-config of this provider.",
     )
 
-    code_unique = models.Constraint(
+    _code_unique = models.Constraint(
         'unique(code)',
         'Provider code must be unique.',
     )

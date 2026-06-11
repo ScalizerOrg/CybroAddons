@@ -38,7 +38,7 @@ class InvoiceTag(models.Model):
     color = fields.Integer(string='Color', default=_get_default_color,
                            help="Tag color")
 
-    name_uniq = models.Constraint(
+    _name_uniq = models.Constraint(
         'unique (name)',
         'Tag name already exists !',
     )

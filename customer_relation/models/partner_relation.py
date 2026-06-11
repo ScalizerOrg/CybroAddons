@@ -68,7 +68,7 @@ class PartnerRelation(models.Model):
         string='Related Name',
     )
 
-    unique_partner_relation = models.Constraint(
+    _unique_partner_relation = models.Constraint(
         'unique(contact_id, relation_contact_id, relation_type_id)',
         _('This relationship already exists.'),
     )

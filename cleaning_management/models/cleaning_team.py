@@ -35,7 +35,7 @@ class CleaningTeam(models.Model):
 
     name = fields.Char(string='Team Name', required=True,
                        help="Choose Team Name")
-    name_unique = models.Constraint(
+    _name_unique = models.Constraint(
         'unique(name)',
         'The team already exists',
     )

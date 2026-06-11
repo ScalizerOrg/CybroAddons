@@ -34,7 +34,7 @@ class DiscussPollVote(models.Model):
     voter_id = fields.Many2one('res.partner', string='Voter', required=True,
                                default=lambda self: self.env.user.partner_id)
 
-    unique_vote = models.Constraint(
+    _unique_vote = models.Constraint(
         'UNIQUE(poll_id, option_id, voter_id)',
         'You cannot vote for the same option twice!',
     )

@@ -156,7 +156,7 @@ class PurchaseRecurringAgreement(models.Model):
                                  help="Indicates the No. of Orders Generated "
                                       "with this Agreement")
 
-    number_uniq = models.Constraint(
+    _number_uniq = models.Constraint(
         'unique(number)',
         'Agreement Number Must be Unique !',
     )

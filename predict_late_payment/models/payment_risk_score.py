@@ -115,7 +115,7 @@ class PaymentRiskScore(models.Model):
     # Metadata
     last_computed = fields.Datetime(string='Last Computed', readonly=True, help='Date and time when the payment risk score was last calculated.')
     notes = fields.Text(string='Internal Notes', help='Additional internal comments or observations regarding this customer’s payment behavior.')
-    unique_partner_company = models.Constraint(
+    _unique_partner_company = models.Constraint(
         'UNIQUE(partner_id, company_id)',
         'A risk score already exists for this customer in this company.',
     )

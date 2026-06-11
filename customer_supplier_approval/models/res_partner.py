@@ -43,7 +43,7 @@ class ResPartner(models.Model):
                               ('approved', 'Approved')], default='draft',
                              string='Status',
                              help="The status of contacts")
-    id_uniq = models.Constraint(
+    _id_uniq = models.Constraint(
         'unique (customer_supplier)',
         'The partner id unique !',
     )

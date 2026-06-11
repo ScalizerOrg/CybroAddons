@@ -53,7 +53,7 @@ class DocumentWorkspace(models.Model):
              'workspace and all of its documents without distinction.\n\n')
 
 
-    name_company_uniq = models.Constraint(
+    _name_company_uniq = models.Constraint(
         'unique (name, company_id)',
         'The name of the workspace must be unique per company!',
     )
